@@ -49,3 +49,15 @@ const famousQoute2 = (): void => {
   } while (famous_qoute === null || famous_qoute === "");
   console.log(`${famous_person} once said:"${famous_qoute}"`);
 };
+/* Asking the user to enter their name with whitespace at the beginning and end of the name. Then it
+prints the name with whitespace and without whitespace. */
+const strippingName = (): void => {
+  let username: string | null;
+  do {
+    username = prompt(
+      "Enter your name with whitespace at the beginning and end of the name."
+    );
+  } while (username === "" || username === null);
+  console.log(`Your name with white spaces is "${username}"`);
+  console.log(`Your name without white spaces is "${username.trim()}"`);
+};
