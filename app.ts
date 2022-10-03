@@ -11,6 +11,10 @@ const personalMessage = (): void => {
     `Assalam u Alaikum ${name}! would You like to learn some python today.`
   );
 };
+/**
+ * It prompts the user for their name, and if they enter a blank or null value, it prompts them again
+ * until they enter a valid name
+ */
 const nameCases = (): void => {
   let name: string | null;
   do {
@@ -20,8 +24,28 @@ const nameCases = (): void => {
   console.log(`Your name in upper case is "${name.toUpperCase()}"`);
 };
 
+/**
+ * The function famousQoute() is a void function that logs a famous quote to the console
+ */
 const famousQoute = (): void => {
   console.log(
     `Albert Einstein once said, “A person who never made a mistake never tried anything new.”`
   );
+};
+/**
+ * It asks the user to enter a famous person's name and a famous quote by that person. If the user
+ * enters nothing, it asks again. Then it prints out the quote.
+ */
+const famousQoute2 = (): void => {
+  let famous_person: string | null;
+  do {
+    famous_person = prompt("Enter the famous person name please.");
+  } while (famous_person === null || famous_person === "");
+  let famous_qoute: string | null;
+  do {
+    famous_qoute = prompt(
+      "Enter the famous of Person whose name you have entered."
+    );
+  } while (famous_qoute === null || famous_qoute === "");
+  console.log(`${famous_person} once said:"${famous_qoute}"`);
 };
