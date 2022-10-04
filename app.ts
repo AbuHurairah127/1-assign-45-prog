@@ -61,3 +61,20 @@ const strippingName = (): void => {
   console.log(`Your name with white spaces is "${username}"`);
   console.log(`Your name without white spaces is "${username.trim()}"`);
 };
+
+/* A function that takes no arguments and returns nothing. It is printing the result of some
+mathematical operations in the console. And the result remains 9 */
+const eightNumbers = (): void => {
+  console.log(5 + 3);
+  console.log(16 / 2);
+  console.log(4 * 2);
+  console.log(24 - 16);
+};
+
+const favoriteNumber = (): void => {
+  let favNumber: number | null;
+  do {
+    favNumber = Number(prompt("Enter your favorite number."));
+  } while (favNumber === null);
+  console.log(`Your favorite number is ${favNumber}`);
+};
