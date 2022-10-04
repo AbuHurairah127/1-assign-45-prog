@@ -106,7 +106,7 @@ const greetingListOfFriends = (): void => {
 };
 /* Printing the list of cars I want to buy in the console. */
 const transportMode = (): void => {
-  let carsList = [
+  let carsList: Array<string> = [
     "Mercedes benz S Class",
     "Mercedes S class MayBach",
     "Rolls Royce Phantom",
@@ -123,4 +123,80 @@ const transportMode = (): void => {
   for (let i = 0; i < carsList.length; i++) {
     console.log(`I am going to buy ${carsList[i]} soon Insha Allah`);
   }
+};
+/**
+ * The function takes in an array of names and prints out a message to each of them.
+ */
+const invitationList = (): void => {
+  let names: Array<string> = ["Ahmad Jajja", "Zain ul Abidin", "Aqeel"];
+  for (let i = 0; i < names.length; i++) {
+    console.log(
+      `Assalam u Alaikum ${names[i]}! You are invited to dinner at Sariyas on my birthday.`
+    );
+  }
+};
+/* Printing the updated list of names in the console.Using splice method update the invitation list */
+const updatedInvitationList = (): void => {
+  let names: Array<string> = ["Ahmad Jajja", "Zain ul Abidin", "Aqeel"];
+  names = names.splice(2, 1, "Bassam Tanvir");
+  for (let i = 0; i < names.length; i++) {
+    console.log(
+      `Assalam u Alaikum ${names[i]}! You are invited to dinner at Sariyas on my birthday.`
+    );
+  }
+};
+/* Printing the updated list of names in the console.Using push method update the invitation list. */
+const biggerInvitationList = (): void => {
+  let names: Array<string> = ["Ahmad Jajja", "Zain ul Abidin", "Aqeel"];
+  names.push("Hassan Saeed", "Aqeel", "Ghulam Fareed");
+  for (let i = 0; i < names.length; i++) {
+    console.log(
+      `Assalam u Alaikum ${names[i]}! You are invited to dinner at Sariyas on my birthday.`
+    );
+  }
+};
+/* Printing the updated list of names in the console.Using pop method update the invitation list. */
+const shorterInvitationList = (): void => {
+  let names: Array<string> = ["Ahmad Jajja", "Zain ul Abidin", "Aqeel"];
+  names.push("Hassan Saeed", "Aqeel", "Ghulam Fareed");
+  names.pop();
+  names.pop();
+  names.pop();
+  names.pop();
+  for (let i = 0; i < names.length; i++) {
+    console.log(
+      `Assalam u Alaikum ${names[i]}! You are invited to dinner at Sariyas on my birthday.`
+    );
+  }
+};
+/* Printing the list of places in different orders. */
+const placesToVisit = (): void => {
+  let places: Array<string> = [
+    "Saudi Arabia",
+    "London",
+    "Turkey",
+    "Korea",
+    "Chile",
+    "Italy",
+  ];
+  let sortedPlaces: Array<string> = [...places];
+  console.log(`In original order ${places}`);
+  console.log(`In alphabetical order ${sortedPlaces.sort()}`);
+  console.log(`In original order ${places}`);
+  console.log(`In reverse alphabetical order ${sortedPlaces.reverse()}`);
+  console.log(`In original order ${places}`);
+  console.log(`In reverse order ${places.reverse()}`);
+  console.log(`In original order ${places.reverse()}`);
+  console.log(`In alphabetical stored order ${places.sort()}`);
+  console.log(`In reverse alphabetical stored order ${places.reverse()}`);
+};
+
+const invitationListCounter = (): void => {
+  let names: Array<string> = ["Ahmad Jajja", "Zain ul Abidin", "Aqeel"];
+  names.push("Hassan Saeed", "Aqeel", "Ghulam Fareed");
+  names.pop();
+  names.pop();
+  names.pop();
+  names.pop();
+  console.log(`You are inviting ${names.length} people to dinner.`);
 };
