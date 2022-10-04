@@ -1,3 +1,5 @@
+//My Name is Abu Hurairah. I am a MERN stack developer Saylani certified Web and Mobile app developer
+
 /**
  * It takes no arguments and returns nothing.
  * Taking an input in prompt and showing a greeting message in console of browser
