@@ -83,3 +83,13 @@ const favoriteNumber = (): void => {
   } while (favNumber === null || favNumber === NaN);
   console.log(`Your favorite number is ${favNumber}`);
 };
+/* A function that takes no arguments and returns nothing. It is printing the names of
+some people in the console. */
+const names = (): void => {
+  let names: Array<string>;
+  names = ["Ahmad Jajja", "Zain ul Abidin", "Hassan Saeed", "Bassam Tanvir"];
+  console.log(names[0]);
+  console.log(names[1]);
+  console.log(names[2]);
+  console.log(names[3]);
+};
