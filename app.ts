@@ -256,3 +256,57 @@ const objectConstructor = (): void => {
   } while (carColor === null || carColor === "");
   constructor(carModel, carCompany, carName, carColor);
 };
+/* A function that takes no arguments and returns nothing. It is printing the list of places in the
+console.
+with some intentional error and without intentional error */
+const intentionalError = (): void => {
+  let places: Array<string> = [
+    "Pakistan",
+    "Saudi Arabia",
+    "United States",
+    "Dubai",
+    "Singapore",
+  ];
+  console.log("Error", places[10]);
+  console.log("Corrected", places[1]);
+  console.log(
+    "Error; it returns -1 which means it does not exists",
+    places.indexOf("Turkey")
+  );
+  console.log("Corrected", places.indexOf("Saudi Arabia"));
+};
+/**
+ * The function is used to test the conditional statements in TypeScript
+ */
+const conditionalTest = (): void => {
+  // Test 1
+  let car: string = "Phantom VIII";
+  car === "Phantom VIII" ? console.log("True") : console.log("False");
+  // Test 2
+  let myName: string = "Abu Hurairah";
+  myName === "Abu Bakar Siddique" ? console.log("True") : console.log("False");
+  // Test 3
+  myName.length === 12 ? console.log("True") : console.log("False");
+  // Test 4
+  let friendName: string = "Ahmad Jajja";
+  friendName === "Ahmad Jajja" ? console.log("True") : console.log("False");
+  // Test 5
+  myName[3] === " " ? console.log("True") : console.log("False");
+  // Test 6
+  car.toUpperCase() === "pHANTOM viii"
+    ? console.log("True")
+    : console.log("False");
+  // Test 7
+  let age: number = 19;
+  age > 18
+    ? console.log("True", "You can cast vote")
+    : console.log("False", "You cannot cast vote");
+  // Test 8
+  let isAuthenticated: boolean = false;
+  isAuthenticated ? console.log("True") : console.log("False");
+  //Test 9
+  myName.lastIndexOf("a") === 9 ? console.log("True") : console.log("False");
+  myName.length < 12 ? console.log("True") : console.log("False");
+};
+
+conditionalTest();
