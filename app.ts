@@ -71,10 +71,13 @@ const eightNumbers = (): void => {
   console.log(24 - 16);
 };
 
+/**
+ * This function prompts the user to enter their favorite number, and then logs it to the console.
+ */
 const favoriteNumber = (): void => {
   let favNumber: number | null;
   do {
     favNumber = Number(prompt("Enter your favorite number."));
-  } while (favNumber === null);
+  } while (favNumber === null || favNumber === NaN);
   console.log(`Your favorite number is ${favNumber}`);
 };
