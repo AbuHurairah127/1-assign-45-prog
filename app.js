@@ -81,6 +81,7 @@ const names = () => {
         console.log(names[i]);
     }
 };
+/* Printing the greeting message for each name in the list of names. */
 const greetingListOfFriends = () => {
     let names = [
         "Ahmad Jajja",
@@ -90,5 +91,25 @@ const greetingListOfFriends = () => {
     ];
     for (let i = 0; i < names.length; i++) {
         console.log(`Assalam u Alaikum ${names[i]}! How are you?`);
+    }
+};
+/* Printing the list of cars I want to buy in the console. */
+const transportMode = () => {
+    let carsList = [
+        "Mercedes benz S Class",
+        "Mercedes S class MayBach",
+        "Rolls Royce Phantom",
+        "Rolls Royce Cullinan",
+        "Rolls Royce Ghost",
+        "Bentlay Continental GT",
+        "Range Rover Autobiography Long Wheelbase",
+        "Toyota Land Cruiser",
+        "Toyota Prado",
+        "Lexus LX 570",
+        "Audi A8L",
+        "BMW 7 Series",
+    ];
+    for (let i = 0; i < carsList.length; i++) {
+        console.log(`I am going to buy ${carsList[i]} soon Insha Allah`);
     }
 };
