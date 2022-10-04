@@ -88,8 +88,18 @@ some people in the console. */
 const names = (): void => {
   let names: Array<string>;
   names = ["Ahmad Jajja", "Zain ul Abidin", "Hassan Saeed", "Bassam Tanvir"];
-  console.log(names[0]);
-  console.log(names[1]);
-  console.log(names[2]);
-  console.log(names[3]);
+  for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+  }
+};
+const greetingListOfFriends = (): void => {
+  let names: Array<string> = [
+    "Ahmad Jajja",
+    "Zain ul Abidin",
+    "Hassan Saeed",
+    "Bassam Tanvir",
+  ];
+  for (let i = 0; i < names.length; i++) {
+    console.log(`Assalam u Alaikum ${names[i]}! How are you?`);
+  }
 };
