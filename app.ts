@@ -191,6 +191,10 @@ const placesToVisit = (): void => {
   console.log(`In reverse alphabetical stored order ${places.reverse()}`);
 };
 
+/**
+ * This function takes an array of names, adds four more names to the array, removes four names from
+ * the array, and then prints out the number of names left in the array.
+ */
 const invitationListCounter = (): void => {
   let names: Array<string> = ["Ahmad Jajja", "Zain ul Abidin", "Aqeel"];
   names.push("Hassan Saeed", "Aqeel", "Ghulam Fareed");
@@ -199,4 +203,56 @@ const invitationListCounter = (): void => {
   names.pop();
   names.pop();
   console.log(`You are inviting ${names.length} people to dinner.`);
+};
+/* Printing the list of languages in the console. */
+const listOfLanguages = (): void => {
+  let list: Array<string> = ["Urdu", "English", "Arabic", "Russian", "Hindi"];
+  for (let i = 0; i < list.length; i++) {
+    console.log(list[i]);
+  }
+};
+/* A function that takes no arguments and returns nothing. It has a sub function which consumes 4 parameter and construct object and print it to the console */
+const objectConstructor = (): void => {
+  let car: { model: string; company: string; name: string; color: string };
+  /**
+   * The function takes in four parameters, and returns nothing.
+   * @param {string} carModel - string,
+   * @param {string} carCompany - string,
+   * @param {string} name - string,
+   * @param {string} color - string
+   * These 4 parameters are used to construct an Object
+   */
+  const constructor = (
+    carModel: string,
+    carCompany: string,
+    name: string,
+    color: string
+  ): void => {
+    car = {
+      ...car,
+      model: carModel,
+      company: carCompany,
+      name: name,
+      color: color,
+    };
+    console.log(car);
+  };
+  let carModel: string | null;
+  let carCompany: string | null;
+  let carName: string | null;
+  let carColor: string | null;
+  do {
+    carModel = prompt(`Enter your car model ${new Date().getFullYear()}: `);
+  } while (carModel === null || carModel === "");
+
+  do {
+    carCompany = prompt("Enter your car company e.g. Rolls Royce: ");
+  } while (carCompany === null || carCompany === "");
+  do {
+    carName = prompt("Enter your car name e.g.Phantom VIII: ");
+  } while (carName === null || carName === "");
+  do {
+    carColor = prompt("Enter your car color e.g.Pearl Black: ");
+  } while (carColor === null || carColor === "");
+  constructor(carModel, carCompany, carName, carColor);
 };
