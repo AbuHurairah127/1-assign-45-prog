@@ -273,4 +273,108 @@ const conditionalTest = () => {
     myName.lastIndexOf("a") === 9 ? console.log("True") : console.log("False");
     myName.length < 12 ? console.log("True") : console.log("False");
 };
-conditionalTest();
+/* The below code is checking the age and nationality of a person and then checking if a person is in
+the friends list or not. */
+const moreConditionalTests = () => {
+    let age = 19, nationality = "Pakistani";
+    if (age > 18 && nationality === "Pakistani") {
+        console.log("True");
+    }
+    else {
+        console.log("False");
+    }
+    let friendsList = [
+        "Ahmad Jajja",
+        "Zain-ul-Abidin",
+        "Chaudary Bassam Tanvir",
+        "Hassan Saeed",
+    ];
+    if (friendsList.includes("Awais")) {
+        console.log("True");
+    }
+    else {
+        console.log("False");
+    }
+    if (friendsList.includes("Ahmad Jajja")) {
+        console.log("True");
+    }
+    else {
+        console.log("False");
+    }
+};
+/**
+ * If the alien_color is green, then log "You have got 5 points" to the console
+ */
+const alienColor1 = () => {
+    let alien_color = "green";
+    // if version
+    alien_color === "green" && console.log("You have got 5 points");
+    // nothing printing version
+    alien_color === "red" && console.log("You have got 5 points");
+};
+/**
+ * If the alien color is green, you get 5 points, otherwise you get 10 points. If the alien color is
+ * red, you get 5 points, otherwise you get 10 points.
+ */
+const alienColor2 = () => {
+    let alien_color = "red";
+    // else vesion
+    if (alien_color === "green") {
+        console.log("You have got 5 points");
+    }
+    else {
+        console.log("You have got 10 points");
+    }
+    // if version
+    if (alien_color === "red") {
+        console.log("You have got 5 points");
+    }
+    else {
+        console.log("You have got 10 points");
+    }
+};
+/**
+ * The function alienColor3() is a TypeScript function that has three versions of the same code, each
+ * version has a different value for the variable alien_color.
+ */
+const alienColor3 = () => {
+    {
+        // Version 1
+        let alien_color = "green";
+        if (alien_color === "green") {
+            console.log("You have got 5 points");
+        }
+        else if (alien_color === "red") {
+            console.log("You have got 10 points");
+        }
+        else if (alien_color === "yellow") {
+            console.log("You have got 15 points");
+        }
+    }
+    {
+        // Version 2
+        let alien_color = "yellow";
+        if (alien_color === "green") {
+            console.log("You have got 5 points");
+        }
+        else if (alien_color === "red") {
+            console.log("You have got 10 points");
+        }
+        else if (alien_color === "yellow") {
+            console.log("You have got 15 points");
+        }
+    }
+    {
+        // Version 3
+        let alien_color = "red";
+        if (alien_color === "green") {
+            console.log("You have got 5 points");
+        }
+        else if (alien_color === "red") {
+            console.log("You have got 10 points");
+        }
+        else if (alien_color === "yellow") {
+            console.log("You have got 15 points");
+        }
+    }
+};
