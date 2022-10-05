@@ -403,3 +403,26 @@ const alienColor3 = (): void => {
     }
   }
 };
+/* The above code is asking the user to enter their age in years. Then it is checking the age and
+printing the life stage of the user. */
+const lifeStages = (): void => {
+  let age: number | null;
+  do {
+    age = Number(prompt("Enter your age in years :"));
+  } while (age === null || age === NaN);
+  if (age < 2) {
+    console.log("You are a baby");
+  } else if (age > 1 && age < 4) {
+    console.log("You are a toddler");
+  } else if (age > 3 && age < 13) {
+    console.log("You are a Kid");
+  } else if (age > 12 && age < 20) {
+    console.log("You are a teenager");
+  } else if (age > 19 && age < 65) {
+    console.log("You are an adult.");
+  } else if (age > 64) {
+    console.log("You are old.");
+  } else {
+    console.error("You have entered an invalid age");
+  }
+};
