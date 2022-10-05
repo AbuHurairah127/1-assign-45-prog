@@ -512,3 +512,41 @@ const checkingUserNames = (): void => {
     console.log(`${newUserName}is available.`);
   }
 };
+/* Printing out the ordinal numbers of the array. */
+const ordinalNumbers = (): void => {
+  let numbers: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  for (let i = 0; i < numbers.length; i++) {
+    if (i === 0) {
+      console.log("1st");
+    } else if (i === 1) {
+      console.log("2nd");
+    } else if (i === 2) {
+      console.log("3rd");
+    } else {
+      console.log(`${numbers[i]}th`);
+    }
+  }
+};
+/**
+ * It takes no arguments and returns nothing.
+ */
+const pizzaStatements = (): void => {
+  let pizza_flavours: Array<string> = ["Fajita", "Malai Boti", "Chicken Tikka"];
+  for (let i = 0; i < pizza_flavours.length; i++) {
+    console.log(`I like to eat ${pizza_flavours[i]} pizza🍕.`);
+  }
+};
+/**
+ * This function creates an array of animals, loops through the array and prints each animal, then
+ * loops through the array again and prints a sentence about each animal, then prints a final sentence.
+ */
+const animalCharacteristics = (): void => {
+  let animals: Array<string> = ["Dog", "Cat", "Parrot"];
+  for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+  }
+  for (let i = 0; i < animals.length; i++) {
+    console.log(`A ${animals[i]} is a great pet.`);
+  }
+  console.log("Any one of these can be great pet.");
+};
