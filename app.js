@@ -530,3 +530,29 @@ const animalCharacteristics = () => {
     }
     console.log("Any one of these can be great pet.");
 };
+/**
+ * The function takes in two parameters, size and message, and prints a message on the console.
+ */
+const shirt = () => {
+    const make_shirt = (size, message) => {
+        console.log(`The size of shirt is ${size} and the message to be printed on the t shirt is ${message}`);
+    };
+    let sizeOfShirt;
+    let message;
+    do {
+        sizeOfShirt = Number(prompt("Enter the size of shirt in number :"));
+    } while (sizeOfShirt === null || sizeOfShirt === 0 || sizeOfShirt === NaN);
+    do {
+        message = prompt("Enter the message you want to print on your T- shirt");
+    } while (message === null || message === "");
+    make_shirt(sizeOfShirt, message);
+};
+/**
+ * The function largeShirt() is a function that prints out a message to the console with different sizes of Shirts
+ */
+const largeShirt = () => {
+    console.log(`The size of shirt is Large and message to be printed on your T- shirt is "I Love to Code"`);
+    console.log(`The size of shirt is Large and message to be printed on your T- shirt is 'import {Ahmad Jajja} from "friendsList"'`);
+    console.log(`The size of shirt is Medium and message to be printed on your T- shirt is 'import {Ahmad Jajja} from "friendsList"'`);
+    console.log(`The size of shirt is XL and message to be printed on your T- shirt is 'export default Distractions'`);
+};
