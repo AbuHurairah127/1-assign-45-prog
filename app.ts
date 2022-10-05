@@ -426,3 +426,89 @@ const lifeStages = (): void => {
     console.error("You have entered an invalid age");
   }
 };
+const favoriteFruits = (): void => {
+  let favorite_fruits: Array<string> = ["Banana", "Apple", "Mangoes", "Orange"];
+  if (favorite_fruits.includes("Banana")) {
+    console.log(`You really like bananas`);
+  }
+  if (favorite_fruits.includes("Water Melon")) {
+    console.log(`You really like Water Melon`);
+  }
+  if (favorite_fruits.includes("Apricot")) {
+    console.log(`You really like Apricot`);
+  }
+  if (favorite_fruits.includes("Mangoes")) {
+    console.log(`You really like Mangoes`);
+  }
+  if (favorite_fruits.includes("Orange")) {
+    console.log(`You really like Oranges`);
+  }
+  if (favorite_fruits.includes("Apple")) {
+    console.log(`You really like Apples`);
+  }
+};
+/* The above code is checking if the user is authenticated or not.If the authenticated user is admin it show different message and for normal user it shows different message */
+const helloWorld = (): void => {
+  let isAuthenticated: boolean = false;
+  let usernames: Array<string> = [
+    "admin",
+    "Abu Hurairah",
+    "Ahmad Jajja",
+    "Zain ul Abidin",
+    "Hassan Saeed",
+  ];
+  let currentUser: string | null;
+  do {
+    currentUser = prompt("Enter You Username");
+  } while (currentUser === null && currentUser === "");
+  for (let i = 0; i < usernames.length; i++) {
+    if (usernames[i] === currentUser) {
+      isAuthenticated = true;
+      if (currentUser === "admin") {
+        console.log(
+          "Assalam u Alaikum Admin! Would you like to see status report."
+        );
+        break;
+      }
+      console.log(
+        `Assalam u Alaikum ${usernames[i]}! Thank you for logging in again.`
+      );
+      break;
+    }
+  }
+};
+/**
+ * If the length of the usernames array is equal to 0, print out 'We need to find some users!'.
+ */
+const noUsers = (): void => {
+  let usernames: Array<string> = [];
+  if (usernames.length === 0) {
+    console.log("We need to find some users!");
+  }
+};
+/* The above code is checking if the username is available or not. */
+const checkingUserNames = (): void => {
+  let isUserNameNotAvailable: boolean = false;
+  let current_users: Array<string> = [
+    "abuhurairah127",
+    "hassansaeed123",
+    "ahmadJajja786",
+    "zainiii81",
+    "ziakhan",
+    "daniyalnaghori",
+  ];
+  let newUserName: string | null;
+  do {
+    newUserName = prompt("Enter your username: ");
+  } while (newUserName === null || newUserName.length === 0);
+  for (let i = 0; i < current_users.length; i++) {
+    if (current_users[i] === newUserName) {
+      console.log("User already exists");
+      isUserNameNotAvailable = true;
+      break;
+    }
+  }
+  if (!isUserNameNotAvailable) {
+    console.log(`${newUserName}is available.`);
+  }
+};
