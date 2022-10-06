@@ -556,3 +556,83 @@ const largeShirt = () => {
     console.log(`The size of shirt is Medium and message to be printed on your T- shirt is 'import {Ahmad Jajja} from "friendsList"'`);
     console.log(`The size of shirt is XL and message to be printed on your T- shirt is 'export default Distractions'`);
 };
+/**
+ * It prompts the user for an artist name and album name, and then returns an object with the artist
+ * name and album name as properties.
+ */
+const music = () => {
+    const music_album = (artistName, albumTitle) => {
+        let music = {
+            artistName: artistName,
+            albumTitle: albumTitle,
+        };
+        return music;
+    };
+    let currentArtistName;
+    let currentAlbumName;
+    do {
+        currentArtistName = prompt("Enter artist name: ");
+    } while (currentArtistName === null || currentArtistName === "");
+    do {
+        currentAlbumName = prompt("Enter album name: ");
+    } while (currentAlbumName === null || currentAlbumName === "");
+    console.log(music_album(currentArtistName, currentAlbumName));
+};
+/**
+ * The function show_magicians() takes an array of strings as an argument and prints each string in the
+ * array.
+ */
+const magicians = () => {
+    const show_magicians = (magiciansList) => {
+        for (let i = 0; i < magiciansList.length; i++) {
+            console.log(magiciansList[i]);
+        }
+    };
+    let magicians = [
+        "Ahmad Jajja",
+        "Zain ul Abidin",
+        "Abu Hurairah",
+    ];
+    show_magicians(magicians);
+};
+/**
+ * It takes an array of magicians, and then it prints the magicians, and then it prints the magicians
+ * again, but with the word "Great" in front of each magician's name.
+ */
+const greatMagicians = () => {
+    const show_magicians = (magiciansList) => {
+        for (let i = 0; i < magiciansList.length; i++) {
+            console.log(magiciansList[i]);
+        }
+    };
+    let magicians = [
+        "Ahmad Jajja",
+        "Zain ul Abidin",
+        "Abu Hurairah",
+    ];
+    show_magicians(magicians);
+    for (let i = 0; i < magicians.length; i++) {
+        magicians[i] = `Great ${magicians[i]}`;
+    }
+    show_magicians(magicians);
+};
+/**
+ * The function show_magicians() takes an array of strings as an argument and returns an array of
+ * strings with the word 'Great' added to the beginning of each string.
+ */
+const unchangedMagicians = () => {
+    const show_magicians = (magiciansList) => {
+        for (let i = 0; i < magiciansList.length; i++) {
+            magiciansList[i] = `Great ${magiciansList[i]}`;
+        }
+        return magiciansList;
+    };
+    let magicians = [
+        "Ahmad Jajja",
+        "Zain ul Abidin",
+        "Abu Hurairah",
+    ];
+    let greatMagicians = [...magicians];
+    console.log(show_magicians(greatMagicians));
+    console.log(magicians);
+};

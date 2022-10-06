@@ -608,3 +608,61 @@ const music = (): void => {
   } while (currentAlbumName === null || currentAlbumName === "");
   console.log(music_album(currentArtistName, currentAlbumName));
 };
+/**
+ * The function show_magicians() takes an array of strings as an argument and prints each string in the
+ * array.
+ */
+const magicians = (): void => {
+  const show_magicians = (magiciansList: Array<string>): void => {
+    for (let i = 0; i < magiciansList.length; i++) {
+      console.log(magiciansList[i]);
+    }
+  };
+  let magicians: Array<string> = [
+    "Ahmad Jajja",
+    "Zain ul Abidin",
+    "Abu Hurairah",
+  ];
+  show_magicians(magicians);
+};
+/**
+ * It takes an array of magicians, and then it prints the magicians, and then it prints the magicians
+ * again, but with the word "Great" in front of each magician's name.
+ */
+const greatMagicians = (): void => {
+  const show_magicians = (magiciansList: Array<string>): void => {
+    for (let i = 0; i < magiciansList.length; i++) {
+      console.log(magiciansList[i]);
+    }
+  };
+  let magicians: Array<string> = [
+    "Ahmad Jajja",
+    "Zain ul Abidin",
+    "Abu Hurairah",
+  ];
+  show_magicians(magicians);
+  for (let i = 0; i < magicians.length; i++) {
+    magicians[i] = `Great ${magicians[i]}`;
+  }
+  show_magicians(magicians);
+};
+/**
+ * The function show_magicians() takes an array of strings as an argument and returns an array of
+ * strings with the word 'Great' added to the beginning of each string.
+ */
+const unchangedMagicians = (): void => {
+  const show_magicians = (magiciansList: Array<string>): Array<string> => {
+    for (let i = 0; i < magiciansList.length; i++) {
+      magiciansList[i] = `Great ${magiciansList[i]}`;
+    }
+    return magiciansList;
+  };
+  let magicians: Array<string> = [
+    "Ahmad Jajja",
+    "Zain ul Abidin",
+    "Abu Hurairah",
+  ];
+  let greatMagicians: Array<string> = [...magicians];
+  console.log(show_magicians(greatMagicians));
+  console.log(magicians);
+};
