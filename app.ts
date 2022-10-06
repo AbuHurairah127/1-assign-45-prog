@@ -586,3 +586,25 @@ const largeShirt = (): void => {
     `The size of shirt is XL and message to be printed on your T- shirt is 'export default Distractions'`
   );
 };
+/**
+ * It prompts the user for an artist name and album name, and then returns an object with the artist
+ * name and album name as properties.
+ */
+const music = (): void => {
+  const music_album = (artistName: string, albumTitle: string): object => {
+    let music: { artistName: string; albumTitle: string } = {
+      artistName: artistName,
+      albumTitle: albumTitle,
+    };
+    return music;
+  };
+  let currentArtistName: string | null;
+  let currentAlbumName: string | null;
+  do {
+    currentArtistName = prompt("Enter artist name: ");
+  } while (currentArtistName === null || currentArtistName === "");
+  do {
+    currentAlbumName = prompt("Enter album name: ");
+  } while (currentAlbumName === null || currentAlbumName === "");
+  console.log(music_album(currentArtistName, currentAlbumName));
+};
