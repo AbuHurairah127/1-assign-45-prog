@@ -666,3 +666,28 @@ const unchangedMagicians = (): void => {
   console.log(show_magicians(greatMagicians));
   console.log(magicians);
 };
+/**
+ * The function takes an array of strings as an argument and returns a string.
+ */
+const sandwiches = (): void => {
+  const sandwichItems = (sandwichToppings: Array<string>): void => {
+    console.log(
+      `I want to have these toppings on my sandwich ${sandwichToppings}`
+    );
+  };
+  let sandwichToppings1: Array<string> = [
+    "Tomato Sauce",
+    "White Sauce",
+    "Mayonnaise",
+  ];
+  let sandwichToppings2: Array<string> = ["White Sauce", "Mayonnaise"];
+  let sandwichToppings3: Array<string> = [
+    "Tomato Sauce",
+    "White Sauce",
+    "Mayonnaise",
+    "Chilli Sauce",
+  ];
+  sandwichItems(sandwichToppings1);
+  sandwichItems(sandwichToppings2);
+  sandwichItems(sandwichToppings3);
+};
