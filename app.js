@@ -659,3 +659,33 @@ const sandwiches = () => {
     sandwichItems(sandwichToppings2);
     sandwichItems(sandwichToppings3);
 };
+const cars = () => {
+    const carDetails = (manufacturer, carModel, color, seats) => {
+        let carDetails = {
+            manufacturer: manufacturer,
+            carModel: carModel,
+        };
+        if (color !== "") {
+            carDetails = Object.assign(Object.assign({}, carDetails), { color: color });
+        }
+        if (seats !== "") {
+            carDetails = Object.assign(Object.assign({}, carDetails), { seats: seats });
+        }
+        return carDetails;
+    };
+    let carManufacturer, model, carColor, seatsInCar;
+    do {
+        carManufacturer = prompt("Enter your car manufacturer: ");
+    } while (carManufacturer === null);
+    do {
+        model = prompt("Enter your car model: ");
+    } while (model === null);
+    do {
+        carColor = prompt("Enter your car car color: ");
+    } while (carColor === null);
+    do {
+        seatsInCar = prompt("Enter the number of seats in your car: ");
+    } while (seatsInCar === null);
+    console.log(carDetails(carManufacturer, model, carColor, seatsInCar));
+};
+cars();
